@@ -13,9 +13,7 @@
             
             var iterate = function (element) {
                 if (element.scope()) {
-                    angular.forEach(element.scope().$$watchers, function (w) {
-                        _this.watchCount += 1;
-                    });
+                    _this.watchCount += element.scope().$$watchers.length;
                 }
                 
                 angular.forEach(element.children(), function (child) {
