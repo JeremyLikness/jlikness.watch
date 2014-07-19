@@ -1,7 +1,7 @@
 jlikness.watch
 ==============
 
-Simple module to enable counting watches in your AngularJS app
+A simple module to enable counting watches in your AngularJS app.
 
 Include jlwatch.js in your app, then add a dependency like this: 
 
@@ -15,4 +15,4 @@ To generate the watches, load the jlWatchService and call countWatches(). It wil
 
     ['jlWatchService', function (ws) { var count = ws.countWatches(); }]
     
-Refer to index.html for an example.
+Refer to index.html for an example. [Click here](http://jeremylikness.github.io/jlikness.watch/) to run the example in your browser.
