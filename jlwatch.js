@@ -8,12 +8,16 @@
         elem: {},
         countWatches: function () {
             
-            var _this = this;
+            var _this = this, scopeList = {};
             this.watchCount = 0;
             
             var iterate = function (element) {
                 if (element.scope()) {
-                    _this.watchCount += element.scope().$$watchers.length;
+                    var scope = element.scope();
+                    if (!scopeList[scope.$id] && scope.$$watchers) {
+                        _this.watchCount += element.scope().$$watchers.length;
+                        scopeList[scope.$id] = true;
+                    }
                 }
                 
                 angular.forEach(element.children(), function (child) {
