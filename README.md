@@ -1,5 +1,6 @@
 jlikness.watch
 ==============
+![No longer maintained](https://img.shields.io/maintenance/no/2020)
 
 A simple module to enable counting watches in your AngularJS app.
 
